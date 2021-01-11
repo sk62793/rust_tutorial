@@ -1,7 +1,7 @@
 extern crate rand;
 
 use rand::Rng;
-use std::{cmp::Ordering, io, fmt::Display};
+use std::{cmp::Ordering, io};
 
 fn main() {
     guess_num();
@@ -76,12 +76,4 @@ fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
         }
     }
     largest
-}
-
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
 }
